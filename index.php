@@ -1,4 +1,35 @@
 
+<?php
+
+if(isset($_POST['submit']))
+{
+
+$nome = $_POST['nome'];
+$sobrenome = $_POST['sobrenome'];
+$cpf = $_POST['cpf'];
+$telefone = $_POST['telefone'];
+$Bairro = $_POST['Bairro'];
+$pizza1 = $_POST['portuguesa'];
+$pizza2 = $_POST['Brocólis com Parmesão'];
+$pizza3 = $_POST['Pimentão com queijo'];
+$result = $_POST['result'];
+
+
+
+$rsult = mysqli_query($conexao, "INSERT INTO usuarios(nome,sobrenome,cpf,telefone,Bairro,ch[],result) 
+VALUES ('$nome','$sobrenome','$telefone','$Bairro','$pizza1', '$pizza2' ,'$pizza3','$result')");
+
+
+
+}
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
